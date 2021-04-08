@@ -8,9 +8,9 @@
   - Венелин Новаков<br>
 
 ## Използвани технологии
-  - [React Native](https://reactnative.dev/)
-  - Node.js
-  - localtunnel
-  - Expo
-  - Google Maps SDK
-  - MongoDB
+  - [React Native](https://reactnative.dev/)<br>
+  - [Node.js](https://nodejs.org/en/)<br>
+  - [localtunnel](https://github.com/localtunnel/localtunnel)<br>
+  - [Expo](https://expo.io/)<br>
+  - [Google Maps SDK](https://console.cloud.google.com/apis/library/maps-android-backend.googleapis.com?id=01d8f5af-dc9a-4b12-af6f-37029d8e3e71&project=analog-codex-283407)<br>
+  - [MongoDB](https://www.mongodb.com/)<br>
