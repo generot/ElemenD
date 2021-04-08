@@ -23,7 +23,8 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "com.whisper2300.ElemenD"
     },
     "web": {
       "favicon": "./assets/favicon.png"
