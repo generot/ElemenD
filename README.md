@@ -8,7 +8,7 @@
   - Венелин Новаков<br>
 
 ## Използвани технологии
-  - (React Native)[https://reactnative.dev/]
+  - [React Native](https://reactnative.dev/)
   - Node.js
   - localtunnel
   - Expo
