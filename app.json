@@ -1,0 +1,12 @@
+{
+  "name": "ElemenD2",
+  "displayName": "ElemenD2",
+  "expo": {
+    "name": "ElemenD2",
+    "slug": "ElemenD2",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
