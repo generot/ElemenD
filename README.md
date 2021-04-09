@@ -1,4 +1,5 @@
 # ElemenD
+![logo](https://github.com/generot/ElemenD/blob/main/assets/emicon.png)
 Сайтът ElemenD, преработен като мобилно приложение, достъпно за всички, напълно безплатно.
 
 ## Разработнически екип
