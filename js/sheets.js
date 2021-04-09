@@ -30,5 +30,24 @@ export const style = StyleSheet.create({
       marginTop: 17, // --> (button.height / 2) + 2
       color: "#000000",
       fontFamily: "Impact"
+    },
+
+    errorTxt: {
+      color: "#cd0000", 
+      fontFamily: "Impact", 
+      fontSize: 30,
+      flexWrap: "wrap",
+      textAlign: "center"
+    }, 
+
+    errorPrompt: {
+      fontSize: 12, 
+      width: 200, 
+      height: 40,
+      marginTop: 10,
+      backgroundColor: "#ffffff",
+      color: "#000000",
+      borderRadius: 100,
+      opacity: 0.5
     }
 });

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Marker } from 'react-native-maps';
-import { View, TouchableOpacity, Text } from 'react-native';
+import { View, TouchableOpacity, Text, StyleSheet } from 'react-native';
 
 export class Location {
     constructor(lng, lat) {
@@ -89,5 +89,20 @@ export const PrimaryButtons = ({style, deviceDims, onAdd, onSubmit}) => {
                 <Text style = {style.text}>Submit marker</Text>
             </TouchableOpacity>
       </View>
+    );
+}
+
+export const ErrorView = (errst, errpr, devWidth) => {
+    return (
+        <View style = {{ flex: 1, backgroundColor: "#404040", justifyContent: "center", alignContent: "center" }}>
+            <Text style = {errst}>An error occurred when connecting to the database server.</Text>
+            <Text style = {{ ...errst, fontSize: 15 }}>-- Possible reasons for outage --</Text>
+            <Text style = {{ 
+                ...errst, ...errpr, marginLeft: devWidth / 4
+            }}>Your internet connection might be down.</Text>
+            <Text style = {{ 
+                ...errst, ...errpr, marginLeft: devWidth / 4
+            }}>The server might have been halted by the host.</Text>
+        </View>
     );
 }
