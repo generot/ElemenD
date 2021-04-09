@@ -1,6 +1,6 @@
 # ElemenD
-![logo](https://github.com/generot/ElemenD/blob/main/assets/emicon.png)<br>
-Сайтът ElemenD, преработен като мобилно приложение, достъпно за всички, напълно безплатно.
+Сайтът ElemenD, преработен като мобилно приложение, достъпно за всички, напълно безплатно.<br>
+![logo](https://github.com/generot/ElemenD/blob/main/assets/emicon.png)
 
 ## Разработнически екип
   - Мартин Наков<br>
