@@ -1,6 +1,7 @@
 {
   "name": "ElemenD2",
   "displayName": "ElemenD2",
+  "icon": "./assets/emicon.png",
   "expo": {
     "name": "ElemenD2",
     "slug": "ElemenD2",
@@ -8,5 +9,8 @@
     "assetBundlePatterns": [
       "**/*"
     ]
+  },
+  "web": {
+    "favicon": "./assets/emicon.png"
   }
 }
