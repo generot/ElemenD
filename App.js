@@ -27,14 +27,13 @@ const Setup = async (handlers) => {
     handlers["location"](new Location(position.coords.longitude, position.coords.latitude).GetCoords());
 
     DownloadMarkers().then(promise => {
-      if(typeof promise === 'number' && promise == serverError) {
+      if(typeof promise === 'number' && promise === serverError) {
         handlers["error"](promise);
         return;
       }
 
       handlers["array"](promise);
       handlers["index"](promise.length);
-      //console.log(`Array: ${JSON.stringify(promise)}\nLength: ${promise.length}`);
     })
   });
 
@@ -53,14 +52,9 @@ const SpriteMarker = ({ markStyle, coords, type, OnEnd }) => {
   );
 }
 
-const test = () => {
-  DownloadMarkers().then(js => console.log(JSON.stringify(js)));
-  return (<View/>);
-}
-
-const entry = () => {
+const elemend = () => {
   const [pos, setPos] = useState(new Location(0, 0).GetCoords());
-  const [err, setErr] = useState(200);
+  const [err, setErr] = useState(200 /*Vsichko e tip top pri kod 200*/);
 
   const [menuState, setMenuState] = useState(false);
   const [primaryState, setPrimaryState] = useState(true);
@@ -130,12 +124,12 @@ const entry = () => {
         />}
       </View>
     );
-    else if(err == serverError) 
-      return ErrorView(style.errorTxt, style.errorPrompt, deviceDims.width);
+    else if(err == serverError) {
+      positionTaken = false;
+      return ErrorView(style, deviceDims.width, setErr);
+    }
 
   return (<View/>)
 }
-
-const elemend = entry;
 
 export default elemend;

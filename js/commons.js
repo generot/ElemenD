@@ -1,6 +1,7 @@
 import React from 'react';
 import { Marker } from 'react-native-maps';
 import { View, TouchableOpacity, Text, StyleSheet } from 'react-native';
+import { style } from './sheets';
 
 export class Location {
     constructor(lng, lat) {
@@ -92,17 +93,20 @@ export const PrimaryButtons = ({style, deviceDims, onAdd, onSubmit}) => {
     );
 }
 
-export const ErrorView = (errst, errpr, devWidth) => {
+export const ErrorView = (styleObj, devWidth, setErr) => {
     return (
-        <View style = {{ flex: 1, backgroundColor: "#404040", justifyContent: "center", alignContent: "center" }}>
-            <Text style = {errst}>An error occurred when connecting to the database server.</Text>
-            <Text style = {{ ...errst, fontSize: 15 }}>-- Possible reasons for outage --</Text>
+        <View style = {{ flex: 1, backgroundColor: "#404040", justifyContent: "center" }}>
+            <Text style = {styleObj.errorTxt}>An error occurred when connecting to the database server.</Text>
+            <Text style = {{ ...styleObj.errorTxt, fontSize: 15 }}>-- Possible reasons for outage --</Text>
             <Text style = {{ 
-                ...errst, ...errpr, marginLeft: devWidth / 4
+                ...styleObj.errorTxt, ...styleObj.errorPrompt, marginLeft: devWidth / 4
             }}>Your internet connection might be down.</Text>
             <Text style = {{ 
-                ...errst, ...errpr, marginLeft: devWidth / 4
+                ...styleObj.errorTxt, ...styleObj.errorPrompt, marginLeft: devWidth / 4
             }}>The server might have been halted by the host.</Text>
+            <TouchableOpacity style = {{ ...styleObj.button, bottom: 170 }} onPress = {() => setErr(200)}>
+                <Text style = {styleObj.text}>Refresh</Text>
+            </TouchableOpacity>
         </View>
     );
 }
