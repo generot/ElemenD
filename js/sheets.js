@@ -1,8 +1,10 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet, Dimensions } from 'react-native';
 
 export const style = StyleSheet.create({
     container: {
       position: 'absolute',
+      width: Dimensions.get("window").width,
+      height: Dimensions.get("window").height,
       top: 0,
       bottom: 0,
       left: 0,
@@ -10,8 +12,10 @@ export const style = StyleSheet.create({
     },
 
     marker: {
-      width: 100,
-      height: 120
+      // width: 100,
+      // height: 120,
+      width: 40,
+      height: 50
     },
 
     button: {

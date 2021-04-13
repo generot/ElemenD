@@ -34,4 +34,20 @@ function ModifyDoc(obj) {
     });
 }
 
-module.exports = { ReceiveDoc, ModifyDoc };
+/**
+ * @param {Array<Object>} markers An array of marker descriptor objects.
+ * @returns {void} Doesn't return anything, but raises exception on failure.
+ */
+
+export function UploadMarkers(markers) {
+    ModifyDoc(markers)
+    .catch(err => console.log(err));
+}
+
+/**
+ * @returns {Promise<Object>} Returns the marker collection wrapped in a Promise
+ */
+
+export async function DownloadMarkers() {
+    return ReceiveDoc({ type: "MarkerStorage" });
+}
