@@ -5,7 +5,6 @@ import MapView from 'react-native-maps';
 import { Location, DraggableMarker, Menu, PrimaryButtons, MarkerDescriptor, ErrorView } from '../ElemenD2/js/commons.js';
 import { style } from '../ElemenD2/js/sheets.js';
 import { UploadMarkers, DownloadMarkers } from '../ElemenD2/js/req.js';
-import { customMap } from '../ElemenD2/js/jsonWrapper.js';
 
 import * as Font from 'expo-font';
 import * as ExpoLocation from 'expo-location';
@@ -112,7 +111,7 @@ const entry = () => {
           initialRegion = {pos}
           style = {style.container}
           minZoomLevel = {18}
-          customMapStyle = {customMap}
+          customMapStyle = {require("../ElemenD2/json/customMap.json")}
           showsUserLocation = {true}
           >
           {arr.map((marker, ix) => (
